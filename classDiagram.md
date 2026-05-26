@@ -15,7 +15,7 @@ classDiagram
         -int 공격력
         -인벤토리 인벤토리
         +void 스킬발동()
-        +인벤토리 인벤토리가져오기()
+        +인벤토리 인벤토리조회()
     }
 
     class 전사 {
@@ -39,14 +39,14 @@ classDiagram
         -String 타입
         -int 가치
         -String 등급
-        +String 등급결정(int 가치)
+        +String 등급계산(int 가치)
     }
 
     class 인벤토리 {
         -List~아이템~ 아이템리스트
         -int 최대용량
         +boolean 아이템추가(아이템 아이템)
-        +boolean 가득찼는지확인()
+        +boolean 용량초과여부()
     }
 
     class 길드 {
@@ -54,7 +54,7 @@ classDiagram
         -List~캐릭터~ 캐릭터리스트
         -int 최대인원
         +boolean 캐릭터가입(캐릭터 캐릭터)
-        +boolean 정원초과확인()
+        +boolean 정원초과여부()
     }
 
     class 아이템획득화면 {
