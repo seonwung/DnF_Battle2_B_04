@@ -9,6 +9,7 @@ classDiagram
     }
 
     class 캐릭터 {
+        <<abstract>>
         -String 캐릭터명
         -String 직업
         -int 체력
