@@ -8,14 +8,14 @@ public class 인벤토리 {
     private int 최대용량 = 10;
 
     public boolean 아이템추가(아이템 아이템) {
-        if (가득찼는지확인()) {
+        if (용량초과여부()) {
             return false;
         }
         아이템리스트.add(아이템);
         return true;
     }
 
-    public boolean 가득찼는지확인() {
+    public boolean 용량초과여부() {
         return 아이템리스트.size() >= 최대용량;
     }
 

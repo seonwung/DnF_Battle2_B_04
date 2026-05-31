@@ -13,7 +13,7 @@ public class 길드 {
     }
 
     public boolean 캐릭터가입(캐릭터 캐릭터) {
-        if (정원초과확인()) {
+        if (정원초과여부()) {
             return false;
         }
         for (캐릭터 c : 캐릭터리스트) {
@@ -25,7 +25,7 @@ public class 길드 {
         return true;
     }
 
-    public boolean 정원초과확인() {
+    public boolean 정원초과여부() {
         return 캐릭터리스트.size() >= 최대인원;
     }
 

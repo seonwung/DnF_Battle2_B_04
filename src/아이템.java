@@ -10,10 +10,10 @@ public class 아이템 {
         this.아이템명 = 아이템명;
         this.타입 = 타입;
         this.가치 = 가치;
-        this.등급 = 등급결정(가치);
+        this.등급 = 등급계산(가치);
     }
 
-    public String 등급결정(int 가치) {
+    public String 등급계산(int 가치) {
         if (가치 >= 1000) return "전설(Legendary)";
         if (가치 >= 500) return "희귀(Rare)";
         return "일반(Common)";
